@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Screening</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Resume Screening Tool</h1>
+            <p>Upload resumes and job descriptions for automated matching.</p>
+        </header>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data" class="upload-form">
+            <!-- Select Upload Type -->
+            <div class="form-group">
+                <label for="upload_type">Select Upload Type:</label>
+                <select id="upload_type" name="upload_type" class="form-control" required>
+                    <option value="1">One Resume, One Job Description</option>
+                    <option value="2">Multiple Resumes, One Job Description</option>
+                    <option value="3">One Resume, Multiple Job Descriptions</option>
+                </select>
+            </div>
+
+            <!-- Resume Upload Section -->
+            <div id="resume_section" class="form-group">
+                <!-- Content dynamically inserted by script.js -->
+            </div>
+
+            <!-- Job Description Upload Section -->
+            <div id="job_desc_section" class="form-group">
+                <!-- Content dynamically inserted by script.js -->
+            </div>
+
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
