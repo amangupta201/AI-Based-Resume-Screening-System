@@ -85,7 +85,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 2. BERT from Hugging Face for contextual text embeddings.
 3. PyTorch for deep learning models.
 4. Scikit-learn for feature extraction and similarity calculations.
-Let me know if you'd like to add any other sections or features to the README!
+
 
 
 
